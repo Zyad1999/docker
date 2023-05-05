@@ -1,0 +1,6 @@
+
+FROM openjdk:17
+
+COPY server.jar /app/server.jar
+
+CMD ["java", "-jar", "/app/server.jar"]

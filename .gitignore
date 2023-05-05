@@ -1,0 +1,11 @@
+/client/target
+/client/.vscode
+/client/.idea
+/server/target
+/server/.vscode
+/server/.idea
+/server/HELP.md
+/server/.mvn
+/server/server.iml
+.idea
+client/client.iml

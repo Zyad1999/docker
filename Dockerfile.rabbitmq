@@ -1,0 +1,18 @@
+# Use an official RabbitMQ image as a parent image
+FROM rabbitmq:3-management
+
+# Expose ports for RabbitMQ
+EXPOSE 5672 15672
+
+# Set an environment variable to enable the RabbitMQ management console
+ENV RABBITMQ_MANAGEMENT_UI=1
+
+# Enable the RabbitMQ management console
+RUN rabbitmq-plugins enable rabbitmq_management
+
+# Set the default username and password for the RabbitMQ management console
+ENV RABBITMQ_DEFAULT_USER=admin
+ENV RABBITMQ_DEFAULT_PASS=password
+
+# Define the command to start RabbitMQ server
+CMD ["rabbitmq-server"]
